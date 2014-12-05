@@ -4,11 +4,11 @@
 <SCRIPT Language="JavaScript">
 <!--//
 function showAndClearField(frm){
-  if (frm.firstName.value == "")
+  if (frm.address.value == "")
       alert("Hey! You didn't enter anything!")
   else
-      alert("The field contains the text: " + frm.firstName.value)
-  frm.firstName.value = ""
+      alert("The field contains the text: " + frm.address.value)
+  frm.address.value = ""
 }
 //-->
 </SCRIPT>
@@ -17,7 +17,7 @@ function showAndClearField(frm){
 <FORM NAME="test">
 <H2>Enter something into the field and press the button. <br>
 Please try this a few times.</H2>
-<P>Enter your First Name: <INPUT TYPE="TEXT" NAME="firstName"><BR><BR>
+<P>Enter your First Name: <INPUT TYPE="TEXT" NAME="address"><BR><BR>
 <INPUT TYPE="Button" Value="Show and Clear Input" onClick="showAndClearField(this.form)">
 </P>
 </FORM>
