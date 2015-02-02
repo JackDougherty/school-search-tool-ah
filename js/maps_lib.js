@@ -148,6 +148,7 @@ var MapsLib = {
     if ( $("#cbZone2").is(':checked')) tempWhereClause.push("Zone 2");
     if ( $("#cbZone3").is(':checked')) tempWhereClause.push("Zone 3");
     if ( $("#cbZone4").is(':checked')) tempWhereClause.push("Zone 4");
+    if ( $("#cbZone5").is(':checked')) tempWhereClause.push("N/A");  // -- Hidden checkbox in index.html
     whereClause += " AND " + type_column + " IN ('" + tempWhereClause.join("','") + "')"; 
 
     //-------end of custom filters--------
