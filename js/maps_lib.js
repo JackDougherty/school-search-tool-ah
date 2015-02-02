@@ -139,6 +139,14 @@ var MapsLib = {
     if ( $("#cbType4").is(':checked')) searchType += "4,";
     // if ( $("#cbType5").is(':checked')) searchType += "5,";
     whereClause += " AND " + searchType.slice(0, searchType.length - 1) + ")";
+    
+    var type_column = "Zone";
+    var searchType = type_column + " IN (-1,";
+    if ( $("#cbZone1").is(':checked')) searchType += "1,";
+    if ( $("#cbZone2").is(':checked')) searchType += "2,";
+    if ( $("#cbZone3").is(':checked')) searchType += "3,";
+    if ( $("#cbZone4").is(':checked')) searchType += "4,";
+    whereClause += " AND " + searchType.slice(0, searchType.length - 1) + ")";
 
     /*-- TEXTUAL OPTION to display legend and filter by non-numerical data in your table
     var type_column = "'Program Type'";  // -- note use of single & double quotes for two-word column header
