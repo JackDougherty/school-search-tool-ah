@@ -117,15 +117,7 @@
                   <input type='checkbox' id='cbZone4' />
                   Zone 4
                 </label>
-              </li>
-              <span style="visibility:hidden"> <!-- HIDDEN checkbox -->
-              <li>
-                <label class='checkbox inline' >  
-                  <input type='checkbox' id='cbZone5' />
-                  N/A
-                </label>
-              </li>
-              </span>
+              </li>  <!-- See also HIDDEN checkbox placed further below to avoid spacing. Need more elegant solution -->
               <li>
                 <label class='checkbox inline'>
                   <input type='checkbox' id='cbType2' />
@@ -172,6 +164,15 @@
                 </label>
               </li>
             </ul> 
+
+              <span style="visibility:hidden"> <!-- HIDDEN checkbox placed here to avoid spacing above -->
+              <li>
+                <label class='checkbox inline' >  
+                  <input type='checkbox' id='cbZone5' />
+                  N/A
+                </label>
+              </li>
+              </span>
 
             <div class='clearfix'></div>
             <p class='pull-left'>
