@@ -141,21 +141,14 @@ var MapsLib = {
     // if ( $("#cbType5").is(':checked')) searchType += "5,";
     whereClause += " AND " + searchType.slice(0, searchType.length - 1) + ")";
     
-    var type_column = "Zone";
-    var searchType = type_column + " IN (-1,";
-    if ( $("#cbZone1").is(':checked')) searchType += "1,";
-    if ( $("#cbZone2").is(':checked')) searchType += "2,";
-    if ( $("#cbZone3").is(':checked')) searchType += "3,";
-    if ( $("#cbZone4").is(':checked')) searchType += "4,";
-    whereClause += " AND " + searchType.slice(0, searchType.length - 1) + ")";
-
-    /*-- TEXTUAL OPTION to display legend and filter by non-numerical data in your table
-    var type_column = "'Program Type'";  // -- note use of single & double quotes for two-word column header
+    // TEXTUAL FILTER OPTION - modify column header and values below to match your Google Fusion Table data and index.html
+    var type_column = "Zone";  // -- note use of single & double quotes for two-word column header
     var tempWhereClause = [];
-    if ( $("#cbType1").is(':checked')) tempWhereClause.push("Interdistrict");
-    if ( $("#cbType2").is(':checked')) tempWhereClause.push("District");
-    if ( $("#cbType3").is(':checked')) tempWhereClause.push("MorePreK");
-    whereClause += " AND " + type_column + " IN ('" + tempWhereClause.join("','") + "')"; */
+    if ( $("#cbZone1").is(':checked')) tempWhereClause.push("Zone 1");
+    if ( $("#cbZone2").is(':checked')) tempWhereClause.push("Zone 2");
+    if ( $("#cbZone3").is(':checked')) tempWhereClause.push("Zone 3");
+    if ( $("#cbZone4").is(':checked')) tempWhereClause.push("Zone 4");
+    whereClause += " AND " + type_column + " IN ('" + tempWhereClause.join("','") + "')"; 
 
     //-------end of custom filters--------
 
