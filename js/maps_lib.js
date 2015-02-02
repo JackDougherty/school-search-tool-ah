@@ -26,7 +26,8 @@ var MapsLib = {
 
   //MODIFY the encrypted Table IDs of your Fusion Tables (found under File => About)
   //NOTE: numeric IDs will be depricated soon
-  fusionTableId:      "1u1KUXrwtoZWmYJrno7NdwyyJ_lWSwrnw4L8ftBsp", //Point data layer
+  fusionTableId:      "1wceRJOjI_sNSFWsRCPtcgAszgEZWtjFrGBlZy2Us", //Point data layer
+  // Using JackCopy of SmarterHartford table https://www.google.com/fusiontables/data?docid=1wceRJOjI_sNSFWsRCPtcgAszgEZWtjFrGBlZy2Us#rows:id=1
 
   polygon1TableID:    "1o-Xs4sG6qgc5u_MLwzVwjOX14WUul4oA1QlZTpTx", //HPS zones
 
