@@ -27,6 +27,7 @@ var MapsLib = {
   //MODIFY the encrypted Table IDs of your Fusion Tables (found under File => About)
   //NOTE: numeric IDs will be depricated soon
   fusionTableId:      "1u1KUXrwtoZWmYJrno7NdwyyJ_lWSwrnw4L8ftBsp", //Point data layer
+  // Using SmarterHartford table https://www.google.com/fusiontables/DataSource?docid=1u1KUXrwtoZWmYJrno7NdwyyJ_lWSwrnw4L8ftBsp
 
   polygon1TableID:    "1o-Xs4sG6qgc5u_MLwzVwjOX14WUul4oA1QlZTpTx", //HPS zones
 
@@ -139,14 +140,16 @@ var MapsLib = {
     if ( $("#cbType4").is(':checked')) searchType += "4,";
     // if ( $("#cbType5").is(':checked')) searchType += "5,";
     whereClause += " AND " + searchType.slice(0, searchType.length - 1) + ")";
-
-    /*-- TEXTUAL OPTION to display legend and filter by non-numerical data in your table
-    var type_column = "'Program Type'";  // -- note use of single & double quotes for two-word column header
+    
+    // TEXTUAL FILTER OPTION - modify column header and values below to match your Google Fusion Table data and index.html
+    var type_column = "Zone";  // -- note use of single & double quotes for two-word column header
     var tempWhereClause = [];
-    if ( $("#cbType1").is(':checked')) tempWhereClause.push("Interdistrict");
-    if ( $("#cbType2").is(':checked')) tempWhereClause.push("District");
-    if ( $("#cbType3").is(':checked')) tempWhereClause.push("MorePreK");
-    whereClause += " AND " + type_column + " IN ('" + tempWhereClause.join("','") + "')"; */
+    if ( $("#cbZone1").is(':checked')) tempWhereClause.push("Zone 1");
+    if ( $("#cbZone2").is(':checked')) tempWhereClause.push("Zone 2");
+    if ( $("#cbZone3").is(':checked')) tempWhereClause.push("Zone 3");
+    if ( $("#cbZone4").is(':checked')) tempWhereClause.push("Zone 4");
+    if ( $("#cbZone5").is(':checked')) tempWhereClause.push("N/A");  // -- Hidden checkbox in index.html
+    whereClause += " AND " + type_column + " IN ('" + tempWhereClause.join("','") + "')"; 
 
     //-------end of custom filters--------
 
